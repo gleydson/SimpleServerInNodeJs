@@ -5,7 +5,9 @@
   "main": "main.js",
   "scripts": {
     "start": "nodemon main.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "",
   "license": "ISC",
@@ -15,9 +17,11 @@
     "cors": "^2.8.3",
     "express": "^4.8.8",
     "jsonwebtoken": "^7.4.1",
-    "mongoose": "^5.4.10"
+    "mongoose": "^5.7.5",
+    "snyk": "^1.190.0"
   },
   "devDependencies": {
     "nodemon": "^1.11.0"
-  }
+  },
+  "snyk": true
 }
